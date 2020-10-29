@@ -1,3 +1,7 @@
 # Clustering-based-QA
 This Repository includes the codes of the paper titled "Clustering-Based Sequence to Sequence Model for Generative Question Answering in a Low-Resource Language" by A. Jalaly Bidgoly and H. Amirkhani.
 
+Abstract
+
+Despite the impressive success of sequence to sequence models for generative question answering, they need a vast amount of question-answer pairs during training, which is hard and expensive to obtain, especially for low-resource languages. In this paper, we present a framework which exploits the semantic clusters among the question-answer pairs to compensate for the lack of enough training data. In the training phase, the question-answer pairs are clustered, and a cluster predictor is trained to identify the cluster each question belongs to. Then, a sequence to sequence model is trained, where there is a different generator for each cluster in the decoder component. During the test phase, the cluster of the input question is first identified using the trained cluster predictor, and the appropriate decoder is exploited. Our experiments on a Persian religious dataset show that the proposed method outperforms the standard sequence to sequence model by a large margin in terms of ROUGE and BLEU scores. This is traced back to the lower number of words in each cluster, leading to a reduction in the number of effective parameters every generator needs to learn, which help the model learn from fewer training data with less overfitting. 
+
